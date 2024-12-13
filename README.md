@@ -43,7 +43,26 @@ $VICAS_DIR
 │   ├── <video #... >
 ├── annotations               
 │   ├── v0.1
-│       └── <video #1.json>
-│       └── <video #2.json>
-│       └── <video #... >
+│   │    └── <video #1.json>
+│   │   └── <video #2.json>
+│   │   └── <video #... >
 ```
+
+## Annotation Format
+
+We provide an easy-to-use API under `vicas/dataset.py` to parse the dataset and its JSON annotations. Please look at the `ViCaSVideo` class definition to see the JSON fields should be parsed. Refer to the Jupyter notebook or Python demo to see various use-cases for the API.
+
+#### TL;DR for Captions Only
+
+If you're only interested in the captions, just use the `caption_parsed_en_gpt` value in the annotation file:
+
+```python
+import json
+with open("<VICAS_DIR>/annotations/v0.1/00000.json") as fh:
+    content = json.load(fh)
+caption = content["caption_parsed_en_gpt"]
+```
+
+## Evaluation
+
+
