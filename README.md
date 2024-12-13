@@ -43,7 +43,7 @@ $VICAS_DIR
 │   ├── <video #... >
 ├── annotations               
 │   ├── v0.1
-│   │    └── <video #1.json>
+│   │   └── <video #1.json>
 │   │   └── <video #2.json>
 │   │   └── <video #... >
 ```
@@ -67,7 +67,7 @@ caption = content["caption_parsed_en_gpt"]
 
 The predictions are in a per-video JSON format similar to the ground-truth. A set of ~1000 prediction files is provided in the HF repo for reference. In short, each JSON file needs to have the following fields `video_id`, `pred_caption` and `pred_lgvis_masks`. You can inspect the example predictions to see the exact format.
 
-Evaluate captioning accuracy requires Llama3-70B. Refer to the [offical website](https://www.llama.com/llama-downloads/) to download the model checkpoint. We use the original (3.0) model version. You will need 8 GPUs to run this model. We will call the checkpoint directory `$LLAMA3_MODEL_DIR` and it should contain `tokenizer.model` and a bunch of `.pth` files is downloaded to `$LLAMA3_MODEL_DIR`. You can the run the evaluation script as follows:
+Evaluate captioning accuracy requires Llama3-70B. Refer to the [offical website](https://www.llama.com/llama-downloads/) to download the model checkpoint. We use the original (3.0) model version. You will need 8 GPUs to run this model. We will call the checkpoint directory `$LLAMA3_MODEL_DIR` and it should contain `tokenizer.model` and several `.pth` files. You can the run the evaluation script as follows:
 
 ```bash
 bash vicas/evaluation/run.sh --pred_dir /path/to/pred --gt_dir /path/to/gt --llama_ckpt_dir $LLAMA3_MODEL_DIR --split {val,test}
