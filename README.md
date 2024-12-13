@@ -9,7 +9,7 @@
 
 ## Updates
 
-- 12.12.2024: Uploaded v0.1 of the dataset with 7,336 videos.
+- 12.12.2024: Uploaded v0.1 of the dataset with 7,331 videos.
 
 ## Demo
 
@@ -63,6 +63,30 @@ with open("<VICAS_DIR>/annotations/v0.1/00000.json") as fh:
 caption = content["caption_parsed_en_gpt"]
 ```
 
-## Evaluation
+## Benchmark Evaluation
 
+The predictions are in a per-video JSON format similar to the ground-truth. A set of ~1000 prediction files is provided in the HF repo for reference. In short, each JSON file needs to have the following fields `video_id`, `pred_caption` and `pred_lgvis_masks`. You can inspect the example predictions to see the exact format.
 
+Evaluate captioning accuracy requires Llama3-70B. Refer to the [offical website](https://www.llama.com/llama-downloads/) to download the model checkpoint. We use the original (3.0) model version. You will need 8 GPUs to run this model. We will call the checkpoint directory `$LLAMA3_MODEL_DIR` and it should contain `tokenizer.model` and a bunch of `.pth` files is downloaded to `$LLAMA3_MODEL_DIR`. You can the run the evaluation script as follows:
+
+```bash
+bash vicas/evaluation/run.sh --pred_dir /path/to/pred --gt_dir /path/to/gt --llama_ckpt_dir $LLAMA3_MODEL_DIR --split {val,test}
+```
+
+#### Task-specific Evaluation
+
+If you're only interested in one of the tasks, you can completely omit the annotations for the other task from the prediction files and run the evaluation as follows. Note that LG-VIS evaluation does not require any GPUs.
+
+- Video Captioning Only:
+
+```bash
+torchrun --nproc_per_node=8 --master_port 2222 vicas/evaluation/main.py --pred_dir /path/to/pred --gt_dir /path/to/gt --llama_ckpt_dir $LLAMA3_MODEL_DIR --split {val,test} --skip_masks
+```
+
+- LG-VIS Only:
+
+```bash
+python3 vicas/evaluation/main.py --pred_dir /path/to/pred --gt_dir /path/to/gt --skip_captions
+```
+
+For further details about the launch arguments for the eval script, run `python3 vicas/evaluation/main.py --help`.
