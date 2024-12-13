@@ -9,7 +9,7 @@
 
 ## Updates
 
-- 12.12.2024: Uploaded v0.1 of the dataset with 7,331 videos.
+- 12 Dec 2024: Uploaded v0.1 of the dataset with 7,331 videos.
 
 ## Demo
 
