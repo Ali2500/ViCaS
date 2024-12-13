@@ -86,7 +86,7 @@ torchrun --nproc_per_node=8 --master_port 2222 vicas/evaluation/main.py --pred_d
 - LG-VIS Only:
 
 ```bash
-python3 vicas/evaluation/main.py --pred_dir /path/to/pred --gt_dir /path/to/gt --skip_captions
+python3 vicas/evaluation/main.py --pred_dir /path/to/pred --gt_dir /path/to/gt --split {val,test} --skip_captions
 ```
 
 For further details about the launch arguments for the eval script, run `python3 vicas/evaluation/main.py --help`.
