@@ -75,7 +75,7 @@ def parse_pred_and_gt_jsons(pred_path, gt_path, skip_masks, skip_captions):
         gt_filenames = sorted([segs_t['filename'] for segs_t in gt_content["segmentations"] if segs_t['is_gt']])
 
         for i in range(num_referrals):
-            pred_referral = pred_content["pred_object_referral_masks"][i]
+            pred_referral = pred_content["pred_lgvis_masks"][i]
             gt_referral = gt_content["object_referrals"][i]
             pred_rles_i_dict = {}
 
