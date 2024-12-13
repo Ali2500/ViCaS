@@ -43,7 +43,7 @@ $VICAS_DIR
 │   ├── <video #... >
 ├── annotations               
 │   ├── v0.1
-│   │   └── <video #1.json>
-│   │   └── <video #2.json>
-│   │   └── <video #... >
+│       └── <video #1.json>
+│       └── <video #2.json>
+│       └── <video #... >
 ```
