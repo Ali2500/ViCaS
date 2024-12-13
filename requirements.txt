@@ -1,0 +1,8 @@
+matplotlib
+numpy
+opencv_python_headless
+pycocotools
+tabulate
+tqdm
+tiktoken==0.4.0
+fairscale==0.4.13
