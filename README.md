@@ -90,3 +90,14 @@ python3 vicas/evaluation/main.py --pred_dir /path/to/pred --gt_dir $VICAS_DIR/an
 ```
 
 For further details about the launch arguments for the eval script, run `python3 vicas/evaluation/main.py --help`.
+
+## BibTeX
+
+```
+@article{athar2024vicas,
+author = {Ali Athar, Xueqing Deng, Liang-Chieh Chen},
+title = {ViCaS: A Dataset for Combining Holistic and Pixel-level Video Understanding using Captions with Grounded Segmentation},
+journal = {Arxiv},
+year = {2024}
+}
+```
