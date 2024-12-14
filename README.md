@@ -5,7 +5,7 @@
 [![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://huggingface.co/datasets/Ali2500/ViCaS)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://ali2500.github.io/vicas-project/)
 
-<p align="center" width="100%">
+<p align="center" width="120%">
     <img src="https://github.com/Ali2500/ViCaS/blob/main/assets/teaser.gif">
 </p>
 
