@@ -17,6 +17,20 @@
 
 - [ ] Release Video-LLaVA-NeXT code and checkpoints
 
+## :hammer: Environment Setup
+
+- Install the required packages:
+
+```
+pip3 install -r requirements.txt
+```
+
+- Install ffmpeg
+
+```
+sudo apt install ffmpeg
+```
+
 ## :movie_camera: Demo 
 
 You can visualize a few samples without downloading the whole dataset. We provide a few example videos under `demo_data/videos`. First, decode these videos into image frames by running:
@@ -25,7 +39,7 @@ You can visualize a few samples without downloading the whole dataset. We provid
 bash demo_data/video_to_frames.sh
 ```
 
-Then you can either run the [Jupyter notebook](https://github.com/Ali2500/ViCaS/blob/main/dataset_demo.ipynb) or the equivalent Python script [dataset_demo.py](https://github.com/Ali2500/ViCaS/blob/main/dataset_demo.py)
+The frames will be saved to `demo_data/video_frames`. Then you can either run the [Jupyter notebook](https://github.com/Ali2500/ViCaS/blob/main/dataset_demo.ipynb) or the equivalent Python script [dataset_demo.py](https://github.com/Ali2500/ViCaS/blob/main/dataset_demo.py)
 
 ## :arrow_double_down: Dataset Download
 
@@ -37,7 +51,7 @@ Due to copyright reasons, we only provide the annotations (captions and segmenta
 python3 vicas/preprocess/gather_videos.py --vicas_dir $VICAS_DIR --oops_dir $OOPS_VIDEOS_DIR
 ```
 
-This will create a directory at `$VICAS_DIR/videos` and put the required videos there with the video IDs prepended to the filename. **You need ffmpeg installed** for this step since some videos need to be split because of cutscenes.
+This will create a directory at `$VICAS_DIR/videos` and put the required videos there with the video IDs prepended to the filename.
 
 Once this is done, you're all set. The file structure should look like this:
 
