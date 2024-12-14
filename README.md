@@ -9,11 +9,11 @@
     <img src="https://github.com/Ali2500/ViCaS/blob/main/assets/teaser.gif">
 </p>
 
-## Updates
+##  :loudspeaker: Updates
 
 - 12 Dec 2024: Uploaded v0.1 of the dataset with 7,331 videos.
 
-## Demo
+## :movie_camera: Demo 
 
 You can visualize a few samples without downloading the whole dataset. We provide a few example videos under `demo_data/videos`. First, decode these videos into image frames by running:
 
@@ -23,7 +23,7 @@ bash demo_data/video_to_frames.sh
 
 Then you can either run the [Jupyter notebook](https://github.com/Ali2500/ViCaS/blob/main/dataset_demo.ipynb) or the equivalent Python script [dataset_demo.py](https://github.com/Ali2500/ViCaS/blob/main/dataset_demo.py)
 
-## Dataset Download
+## :arrow_double_down: Dataset Download
 
 The annotations are hosted on [HuggingFace](https://huggingface.co/datasets/Ali2500/ViCaS). Clone the HF repo to a directory which we will call `$VICAS_DIR`.
 
