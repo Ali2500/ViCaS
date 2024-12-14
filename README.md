@@ -13,6 +13,10 @@
 
 - **12 Dec 2024:** Uploaded v0.1 of the dataset with 7,331 videos.
 
+## 👨‍💻 Todo
+
+- [ ] Release Video-LLaVA-NeXT code and checkpoints
+
 ## :movie_camera: Demo 
 
 You can visualize a few samples without downloading the whole dataset. We provide a few example videos under `demo_data/videos`. First, decode these videos into image frames by running:
