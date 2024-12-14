@@ -105,3 +105,8 @@ journal = {Arxiv},
 year = {2024}
 }
 ```
+
+## :sparkles: Acknowledgements
+
+- [Open-LLaVA-NeXT](https://github.com/xiaoachen98/Open-LLaVA-NeXT): We built the Video-LLaVA-Seg codebase based on this.
+- [SAM2](https://github.com/facebookresearch/sam2/tree/main): We adopted this model as our segmentation network 
