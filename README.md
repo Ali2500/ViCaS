@@ -72,7 +72,7 @@ $VICAS_DIR
 
 We provide an easy-to-use API under `vicas/dataset.py` to parse the dataset and its JSON annotations. Please look at the `ViCaSVideo` class definition to see the JSON fields should be parsed. Refer to the Jupyter notebook or Python demo to see various use-cases for the API.
 
-#### TL;DR for Captions Only
+### TL;DR for Captions Only
 
 If you're only interested in the captions, just use the `caption_parsed_en_gpt` value in the annotation file:
 
@@ -95,17 +95,17 @@ bash vicas/evaluation/run.sh --pred_dir /path/to/pred --gt_dir /path/to/gt --lla
 
 The calculated scores will be printed and also written to `/path/to/eval_output.json`
 
-#### Task-specific Evaluation
+### Task-specific Evaluation
 
 If you're only interested in one of the tasks, you can completely omit the annotations for the other task from the prediction files and run the evaluation as follows. Note that LG-VIS evaluation does not require any GPUs.
 
-- Video Captioning Only:
+- **Video Captioning Only:**
 
 ```bash
 torchrun --nproc_per_node=8 --master_port 2222 vicas/evaluation/main.py --pred_dir /path/to/pred --gt_dir $VICAS_DIR/annotations/v0.1 --llama_ckpt_dir $LLAMA3_MODEL_DIR --split {val,test} --skip_masks -o /path/to/eval_output.json
 ```
 
-- LG-VIS Only:
+- **LG-VIS Only**:
 
 ```bash
 python3 vicas/evaluation/main.py --pred_dir /path/to/pred --gt_dir $VICAS_DIR/annotations/v0.1 --split {val,test} --skip_captions -o /path/to/eval_output.json
