@@ -53,21 +53,34 @@ Due to copyright reasons, we only provide the annotations (captions and segmenta
 python3 vicas/preprocess/gather_videos.py --vicas_dir $VICAS_DIR --oops_dir $OOPS_VIDEOS_DIR
 ```
 
-This will create a directory at `$VICAS_DIR/videos` and put the required videos there with the video IDs prepended to the filename.
+This will create a directory at `$VICAS_DIR/videos` and put the required videos there with the video IDs prepended to the filename. To train and evaluate LG-VIS, you also need to decode the videos into image frames:
 
-Once this is done, you're all set. The file structure should look like this:
+```bash
+bash vicas/preprocess/videos_to_frames.sh $VICAS_DIR/videos $VICAS_DIR/video_frames
+```
+
+The image frames for each video will be saved to a directory at `$VICAS_DIR/video_frames/<video_id>`. At this stage, the file structure should look like this:
 
 ```
 $VICAS_DIR
 ├── videos                      
 │   ├── <video #1.mp4>
 │   ├── <video #2.mp4>
-│   ├── <video #... >
+│   ├── ...
+├── video_frames
+│   ├── <video #1>
+│   │   └── 00000.jpg
+│   │   └── 00001.jpg
+│   │   └── ...
+│   ├── <video #2>
+│   │   └── 00000.jpg
+│   │   └── 00001.jpg
+│   ├── ...
 ├── annotations               
 │   ├── v0.1
 │   │   └── <video #1.json>
 │   │   └── <video #2.json>
-│   │   └── <video #... >
+│   │   └── ...
 ```
 
 ## Annotation Format
