@@ -81,6 +81,11 @@ $VICAS_DIR
 │   │   └── <video #1.json>
 │   │   └── <video #2.json>
 │   │   └── ...
+├── splits
+│   ├── v0.1
+│   │   └── train.json
+│   │   └── val.json
+│   │   └── test.json
 ```
 
 ## Annotation Format
