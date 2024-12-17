@@ -11,6 +11,12 @@
     <img src="https://github.com/Ali2500/ViCaS/blob/main/assets/teaser.gif">
 </p>
 
+## 🔥 Highlights
+
+1. We introduce ViCaS, a **human-annotated video dataset** containing **thousands of videos with detailed captions, along with pixel-precise segmentation masks** for salient objects with phrase-grounding to the caption.
+2. Our benchmark contains two tasks: **(a) Video Captioning**, which evaluates high-level video understanding, and **(b) Language-Guided Video Instance Segmentation (LGVIS)**, which evaluates finegrained, pixel-level localization based on text prompts.
+3. We propose **Video-LLaVA-Seg**, an effective baseline architecture that can tackle both of our benchmark tasks with a single, end-to-end trained model.
+
 ##  :loudspeaker: Updates
 
 - **12 Dec 2024:** Uploaded v0.1 of the dataset with 7,331 videos.
