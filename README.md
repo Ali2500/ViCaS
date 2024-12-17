@@ -2,8 +2,8 @@
 
 [Ali Athar](https://www.aliathar.net/), [Xueqing Deng](https://sites.google.com/view/xueqingdeng7/home), [Liang-Chieh Chen](http://liangchiehchen.com/)
 
-[![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://huggingface.co/datasets/Ali2500/ViCaS)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://ali2500.github.io/vicas-project/)
+[![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://huggingface.co/datasets/Ali2500/ViCaS)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2412.09754)
 [![Full Paper](https://img.shields.io/badge/Full_Paper-Read-0000FF.svg)](https://arxiv.org/pdf/2412.09754)
 
