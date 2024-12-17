@@ -17,7 +17,8 @@
 
 ## 👨‍💻 Todo
 
-- [ ] Release Video-LLaVA-NeXT code and checkpoints
+- [ ] Release Video-LLaVA-Seg code
+- [ ] Release Video-LLaVA-Seg model weights
 
 ## :hammer: Environment Setup
 
