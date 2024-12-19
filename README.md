@@ -76,9 +76,11 @@ To train and evaluate LG-VIS, you also need to decode the videos into image fram
 bash vicas/preprocess/videos_to_frames.sh $VICAS_DIR/videos $VICAS_DIR/video_frames
 ```
 
-The image frames for each video will be saved to a directory at `$VICAS_DIR/video_frames/<video_id>`. 
+The image frames for each video will be saved to a directory at `$VICAS_DIR/video_frames/<video_id>`.
 
-At this stage, the file structure should look like this:
+### Recommended File Structure
+
+Once the videos are downloaded and decoded into frames, the file structure for `$VICAS_DIR` should look like this:
 
 ```
 $VICAS_DIR
