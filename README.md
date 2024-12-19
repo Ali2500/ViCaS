@@ -58,7 +58,7 @@ Due to copyright reasons, we only provide the annotations (captions and segmenta
 
 **Option 1: Download and preprocess the videos**
 
-Download the Oops dataset videos from [here](https://omnomnom.vision.rwth-aachen.de/data/PointVOS/videos/Oops/) and put them under a directory `$OOPS_VIDEOS_DIR` with `train` and `val` subdirectories. Then, run the preprocessing script:
+Download the Oops dataset videos from [here](https://omnomnom.vision.rwth-aachen.de/data/PointVOS/videos/Oops/) and put them under some directory `$OOPS_VIDEOS_DIR` with `train` and `val` subdirectories. Then, run the preprocessing script:
 
 ```bash
 python3 vicas/preprocess/gather_videos.py --vicas_dir $VICAS_DIR --oops_dir $OOPS_VIDEOS_DIR
@@ -68,7 +68,7 @@ This will create a directory at `$VICAS_DIR/videos` and put the required videos 
 
 **Option 2: Download preprocessed videos**
 
-[Alexey Nekrasov](https://nekrasov.dev/) from the research community has been working with the dataset and was kind enough to upload his preprocessed data to [HuggingFace](https://huggingface.co/datasets/kumuji/ViCaS).
+[Alexey Nekrasov](https://nekrasov.dev/) from the research community has been working with the dataset and was kind enough to upload his preprocessed data to [HuggingFace](https://huggingface.co/datasets/kumuji/ViCaS). Simply put the `videos` directory under $VICAS_DIR
 
 ### Decode Video Frames
 
