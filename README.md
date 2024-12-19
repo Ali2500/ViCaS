@@ -54,19 +54,33 @@ The frames will be saved to `demo_data/video_frames`. Then you can either run th
 
 The annotations are hosted on [HuggingFace](https://huggingface.co/datasets/Ali2500/ViCaS). Clone the HF repo to a directory which we will call `$VICAS_DIR`.
 
-Due to copyright reasons, we only provide the annotations (captions and segmentation masks). Download the Oops dataset videos from [here](https://omnomnom.vision.rwth-aachen.de/data/PointVOS/videos/Oops/) and put them under a directory `$OOPS_VIDEOS_DIR` with `train` and `val` subdirectories. Then, run the preprocessing script:
+Due to copyright reasons, we only provide the annotations (captions and segmentation masks). You have two options to obtain the videos:
+
+**Option 1: Download and preprocess the videos**
+
+Download the Oops dataset videos from [here](https://omnomnom.vision.rwth-aachen.de/data/PointVOS/videos/Oops/) and put them under a directory `$OOPS_VIDEOS_DIR` with `train` and `val` subdirectories. Then, run the preprocessing script:
 
 ```bash
 python3 vicas/preprocess/gather_videos.py --vicas_dir $VICAS_DIR --oops_dir $OOPS_VIDEOS_DIR
 ```
 
-This will create a directory at `$VICAS_DIR/videos` and put the required videos there with the video IDs prepended to the filename. To train and evaluate LG-VIS, you also need to decode the videos into image frames:
+This will create a directory at `$VICAS_DIR/videos` and put the required videos there with the video IDs prepended to the filename. 
+
+**Option 2: Download preprocessed videos**
+
+[Alexey Nekrasov](https://nekrasov.dev/) from the research community has been working with the dataset and was kind enough to upload his preprocessed data to [HuggingFace](https://huggingface.co/datasets/kumuji/ViCaS).
+
+### Decode Video Frames
+
+To train and evaluate LG-VIS, you also need to decode the videos into image frames:
 
 ```bash
 bash vicas/preprocess/videos_to_frames.sh $VICAS_DIR/videos $VICAS_DIR/video_frames
 ```
 
-The image frames for each video will be saved to a directory at `$VICAS_DIR/video_frames/<video_id>`. At this stage, the file structure should look like this:
+The image frames for each video will be saved to a directory at `$VICAS_DIR/video_frames/<video_id>`. 
+
+At this stage, the file structure should look like this:
 
 ```
 $VICAS_DIR
