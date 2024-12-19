@@ -52,9 +52,7 @@ The frames will be saved to `demo_data/video_frames`. Then you can either run th
 
 ## :arrow_double_down: Dataset Download
 
-The annotations are hosted on [HuggingFace](https://huggingface.co/datasets/Ali2500/ViCaS). Clone the HF repo to a directory which we will call `$VICAS_DIR`.
-
-Due to copyright reasons, we only provide the annotations (captions and segmentation masks). You have two options to obtain the videos:
+The annotations are hosted on [HuggingFace](https://huggingface.co/datasets/Ali2500/ViCaS). Clone the HF repo to a directory which we will call `$VICAS_DIR`. Due to copyright reasons, we only provide the annotations (captions and segmentation masks). You have two options to obtain the videos:
 
 **Option 1: Download and preprocess the videos**
 
