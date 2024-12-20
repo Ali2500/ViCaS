@@ -66,7 +66,7 @@ This will create a directory at `$VICAS_DIR/videos` and put the required videos 
 
 **Option 2: Download preprocessed videos**
 
-[Alexey Nekrasov](https://nekrasov.dev/) from the research community has been working with the dataset and was kind enough to upload his preprocessed data to [HuggingFace](https://huggingface.co/datasets/kumuji/ViCaS). Simply put the `videos` directory under `$VICAS_DIR`
+[Alexey Nekrasov](https://nekrasov.dev/) from the research community has been working with the dataset and was kind enough to upload his preprocessed data to [HuggingFace](https://huggingface.co/datasets/kumuji/ViCaS). Clone his repo and simply put the `videos` directory under `$VICAS_DIR`
 
 ### Decode Video Frames
 
