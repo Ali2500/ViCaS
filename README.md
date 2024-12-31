@@ -78,7 +78,7 @@ bash vicas/preprocess/videos_to_frames.sh $VICAS_DIR/videos $VICAS_DIR/video_fra
 
 The image frames for each video will be saved to a directory at `$VICAS_DIR/video_frames/<video_id>`.
 
-### Recommended File Structure
+### File Structure
 
 Once the videos are downloaded and decoded into frames, the file structure for `$VICAS_DIR` should look like this:
 
@@ -111,7 +111,7 @@ $VICAS_DIR
 
 ## Annotation Format
 
-We provide an easy-to-use API under `vicas/dataset.py` to parse the dataset and its JSON annotations. Please look at the `ViCaSVideo` class definition to see the JSON fields should be parsed. Refer to the Jupyter notebook or Python demo to see various use-cases for the API.
+We provide an easy-to-use API under `vicas/dataset.py` to parse the dataset and its JSON annotations. Please look at the `ViCaSVideo` class definition to see the JSON fields should be parsed. Refer to the [Jupyter notebook](dataset_demo.ipynb) or [Python demo](dataset_demo.py) to see various use-cases for the API.
 
 ### TL;DR for Captions Only
 
