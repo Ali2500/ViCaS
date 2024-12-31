@@ -131,8 +131,8 @@ We also provide captions in Chinese. These were obtained by machine-translating 
 ```python
 from vicas.caption_parsing import parse_caption
 
-caption_raw = content["caption_raw_cn"] # with object-grounding syntax
-caption_parsed = parse_caption(caption_raw).parsed
+caption_raw = content["caption_raw_cn"]             # with object-grounding syntax
+caption_parsed = parse_caption(caption_raw).parsed  # regular, human-readable caption
 ```
 
 ## Benchmark Evaluation
