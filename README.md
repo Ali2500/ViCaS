@@ -126,7 +126,7 @@ caption = content["caption_parsed_en_gpt"]
 
 ### Chinese Captions
 
-We also provide captions in Chinese. These were obtained by translating the human-written English captions. 
+We also provide captions in Chinese. These were obtained by machine-translating the English captions. Note that no quality checks were applied to them so they may contain errors.
 
 ```python
 from vicas.caption_parsing import parse_caption
