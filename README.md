@@ -124,6 +124,17 @@ with open("<VICAS_DIR>/annotations/v0.1/00000.json") as fh:
 caption = content["caption_parsed_en_gpt"]
 ```
 
+### Chinese Captions
+
+We also provide captions in Chinese. These were obtained by translating the human-written English captions. 
+
+```python
+from vicas.caption_parsing import parse_caption
+
+caption_raw = content["caption_parsed_cn_raw"] # with object-grounding syntax
+caption_parsed = parse_caption(caption_raw).parsed
+```
+
 ## Benchmark Evaluation
 
 The predictions are in a per-video JSON format similar to the ground-truth. A set of ~1000 prediction files is provided in the HF repo for reference. In short, each JSON file needs to have the following fields `video_id`, `pred_caption` and `pred_lgvis_masks`. You can inspect the example predictions to see the exact format.
@@ -138,7 +149,7 @@ The calculated scores will be printed and also written to `/path/to/eval_output.
 
 ### Task-specific Evaluation
 
-If you're only interested in one of the tasks, you can completely omit the annotations for the other task from the prediction files and run the evaluation as follows. Note that LG-VIS evaluation does not require any GPUs.
+The following instructions are for evaluating just one of the tasks. In this case, the prediction files need not contain . Note that LG-VIS evaluation does not require any GPUs.
 
 - **Video Captioning Only:**
 
