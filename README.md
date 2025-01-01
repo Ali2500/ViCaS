@@ -165,7 +165,7 @@ python3 vicas/evaluation/main.py --pred_dir /path/to/pred --gt_dir $VICAS_DIR/an
 
 For further details about the launch arguments for the eval script, run `python3 vicas/evaluation/main.py --help`.
 
-## Terms of use
+## ⚠️ Terms of use
 * This dataset cannot be used for commercial purposes. It has been created for research purposes only.
 * This is not an official ByteDance product.
 
