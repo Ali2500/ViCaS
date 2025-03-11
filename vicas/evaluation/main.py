@@ -188,7 +188,7 @@ if __name__ == "__main__":
     parser.add_argument("--output_path", "-o", required=True, help="Path to JSON file where the evaluation output will be saved.")
 
     parser.add_argument("--split", default="val", choices=("train", "val", "test"), help="Specify which split to evaluate")
-    parser.add_argument("--dataset_version", default="0.1", help="Specify which version of the dataset to evaluate")
+    parser.add_argument("--dataset_version", default="v1.0", help="Specify which version of the dataset to evaluate")
 
     parser.add_argument("--llama_ckpt_dir", required=False, help="Path to Llama3-70B checkpoint directory. This directory should contain a tokenizer.model file and several *.pth files. Not needed if '--skip_captions' is set.")
     parser.add_argument("--skip_captions", action='store_true', help="If set, only the LG-VIS metrics will be calculated and the predicted captions will be ignored")
