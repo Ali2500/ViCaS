@@ -19,6 +19,7 @@
 
 ##  :loudspeaker: Updates
 
+- **26 Feb 2025:** We're accepted to CVPR 2025!
 - **12 Dec 2024:** Uploaded v0.1 of the dataset with annotations for 7,331 videos.
 
 ## 👨‍💻 Todo
@@ -175,8 +176,8 @@ For further details about the launch arguments for the eval script, run `python3
 @article{athar2024vicas,
 author = {Ali Athar, Xueqing Deng, Liang-Chieh Chen},
 title = {ViCaS: A Dataset for Combining Holistic and Pixel-level Video Understanding using Captions with Grounded Segmentation},
-journal = {Arxiv},
-year = {2024}
+journal = {CVPR},
+year = {2025}
 }
 ```
 
