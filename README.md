@@ -1,4 +1,4 @@
-# ViCaS: A Dataset for Combining Holistic and Pixel-level Video Understanding using Captions with Grounded Segmentation
+# ViCaS: A Dataset for Combining Holistic and Pixel-level Video Understanding using Captions with Grounded Segmentation (CVPR'25)
 
 [Ali Athar](https://www.aliathar.net/), [Xueqing Deng](https://sites.google.com/view/xueqingdeng7/home), [Liang-Chieh Chen](http://liangchiehchen.com/)
 
