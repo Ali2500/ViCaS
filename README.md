@@ -20,7 +20,7 @@
 ##  :loudspeaker: Updates
 
 - **14 Mar 2025:** Uploaded v1.0 of the dataset with annotations for 20,416 videos.
-- **26 Feb 2025:** We're accepted to CVPR 2025!
+- **26 Feb 2025:** We're accepted to CVPR 2025.
 - **12 Dec 2024:** Uploaded v0.1 of the dataset with annotations for 7,331 videos.
 
 ## 👨‍💻 Todo
