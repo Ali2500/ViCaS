@@ -25,8 +25,8 @@
 
 ## 👨‍💻 Todo
 
-- [ ] Release Video-LLaVA-Seg code
-- [ ] Release Video-LLaVA-Seg model weights
+- [X] Release Video-LLaVA-Seg code
+- [X] Release Video-LLaVA-Seg model weights
 
 ## :hammer: Environment Setup
 
@@ -56,7 +56,11 @@ The frames will be saved to `demo_data/video_frames`. Then you can either run th
 
 The annotations are hosted on [HuggingFace](https://huggingface.co/datasets/Ali2500/ViCaS). Clone the HF repo to a directory which we will call `$VICAS_DIR`. Due to copyright reasons, we only provide the annotations (captions and segmentation masks). You have two options to obtain the videos:
 
-**Option 1: Download and preprocess the videos**
+**Option 1: Download preprocessed videos**
+
+[Alexey Nekrasov](https://nekrasov.dev/) from the research community has been working with the dataset and was kind enough to upload his preprocessed data to [HuggingFace](https://huggingface.co/datasets/kumuji/ViCaS). In this repo, the videos are split across multiple directories, but you should put them all in a single directory called `videos` and place this directory under `$VICAS_DIR`.
+
+**Option 2: Download and preprocess the videos**
 
 Download the Oops dataset videos from [here](https://omnomnom.vision.rwth-aachen.de/data/PointVOS/videos/Oops/) and put them under some directory `$OOPS_VIDEOS_DIR` with `train` and `val` subdirectories. Then, run the preprocessing script:
 
@@ -65,10 +69,6 @@ python3 vicas/preprocess/gather_videos.py --vicas_dir $VICAS_DIR --oops_dir $OOP
 ```
 
 This will create a directory at `$VICAS_DIR/videos` and put the required videos there with the video IDs prepended to the filename. 
-
-**Option 2: Download preprocessed videos**
-
-[Alexey Nekrasov](https://nekrasov.dev/) from the research community has been working with the dataset and was kind enough to upload his preprocessed data to [HuggingFace](https://huggingface.co/datasets/kumuji/ViCaS). Clone his repo and simply put the `videos` directory under `$VICAS_DIR`
 
 ### Decode Video Frames
 
